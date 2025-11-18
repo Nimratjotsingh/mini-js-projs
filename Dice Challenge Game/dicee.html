@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Dicee</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Lets Play</h1>
-
-      <div class="dice">
-        <p>Player 1</p>
-        <img id="img1" src="images/dice1.png" />
-      </div>
-
-      <div class="dice">
-        <p>Player 2</p>
-        <img id="img2" src="images/dice1.png" />
-      </div>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+</head>
+<body>
+    <div id="page">
+    <header>
+        <h1>Dice Game</h1>
+    </header>
+    <main>
+        <div id="game-container">
+            <div id="player1">
+                <h2>Player 1</h2>
+                <img id="dice1" src="images/dice1.png" alt="Dice 1">
+                <p>Score: <span id="score1">0</span></p>
+            </div>
+            <div id="player2">
+                <h2>Player 2</h2>
+                <img id="dice2" src="images/dice1.png" alt="Dice 2">
+                <p>Score: <span id="score2">0</span></p>
+            </div>
+        </div>
+        <center><button id="btn" onclick="result()">Roll Dice</button></center>
+    </main>
     </div>
-    <div id="Refresh">
-      <button class="btn" onclick="refreshPage()">Roll Dice</button>
-    </div>
-
-    <footer>Nimratjot Singh</footer>
-    <script src="index.js" charset="UTF-8"></script>
-
-  </body>
+    <script src="index.js"></script>
+</body>
 </html>

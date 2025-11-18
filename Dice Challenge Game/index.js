@@ -1,27 +1,29 @@
+var player1Score = 0;
+var player2Score = 0;
 function player1(){
-    var randomNumber1 = Math.floor(Math.random() * 6) + 1;
-    var randomDiceImage = "dice" + randomNumber1 + ".png";
-    var randomImageSource = "images/" + randomDiceImage;
-    document.getElementById("img1").setAttribute("src", randomImageSource);
-    return randomNumber1;
+    var diceNumber = Math.floor(Math.random()*6)+1;
+    var imageSource = `images/dice${diceNumber}.png`;
+    document.getElementById("dice1").setAttribute("src",imageSource);
+    return diceNumber;
 }
-
 function player2(){
-	var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-	var randomDiceImage = "dice" + randomNumber2 + ".png";
-    var randomImageSource = "images/" + randomDiceImage;
-	document.getElementById("img2").setAttribute("src", randomImageSource);
-	return randomNumber2;
+    var diceNumber = Math.floor(Math.random()*6)+1;
+    var imageSource = `images/dice${diceNumber}.png`;
+    document.getElementById("dice2").setAttribute("src",imageSource);
+    return diceNumber;
 }
-function refreshPage(){
-    var p1 = player1();
-    var p2 = player2();
-    if(p1 > p2){
-        document.querySelector("h1").innerHTML = "Player 1 Wins!";
-    }else if(p2 > p1){
-        document.querySelector("h1").innerHTML = "Player 2 Wins!";
+function result(){
+    var score1 = player1();
+    var score2 = player2();
+    if (score1>score2){
+        player1Score++;
+        document.getElementById("score1").innerText = player1Score;
+        document.querySelector("h1").innerText = "Player 1 Wins!";
+    }else if(score2>score1){
+        player2Score++;
+        document.getElementById("score2").innerText = player2Score;
+        document.querySelector("h1").innerText = "Player 2 Wins!";
     }else{
-        document.querySelector("h1").innerHTML = "Draw!";
+        document.querySelector("h1").innerText = "It's a Draw!";
     }
-    document.querySelector(".btn").innerHTML = "Play Again";
 }
