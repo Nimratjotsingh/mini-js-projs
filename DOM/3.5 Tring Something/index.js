@@ -1,0 +1,1 @@
+document.querySelector("#list .item a").style.color = "red";
