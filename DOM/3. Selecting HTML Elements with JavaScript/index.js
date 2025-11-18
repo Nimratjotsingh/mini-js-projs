@@ -16,3 +16,12 @@ document.getElementsByClassName("btn");
 
 // Search element by ID & manupulating it
 console.log(document.getElementById("title").innerHTML = "Goodbye");
+
+// Search element
+document.querySelector("button").style.backgroundColor = "yellow";
+
+// You will only get the first element that matches the selector
+document.querySelector("li.list");
+
+// If we want all the elements that match the selector
+document.querySelectorAll("li.list");
