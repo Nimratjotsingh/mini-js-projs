@@ -6,7 +6,7 @@ document.querySelectorAll(".button").forEach((btn)=>{
 			document.querySelector("input").value = string;
 		}else if(e.target.innerText == 'C'){
 			string='';
-			document.querySelector("input").value = string;
+			document.querySelector("input").value = string; 
 		}
 		
 		else{
