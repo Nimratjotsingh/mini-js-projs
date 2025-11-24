@@ -29,3 +29,32 @@ $("button").click(function(){
 $(document).keypress(function(event){
 	$("h1").text(event.key)
 });
+
+$("h1").on("click", function(){
+	$("h1").css("color","purple");
+});
+
+$("h1").hover(
+    function () {
+        $(this).css("color", "purple");      // mouse enter
+    },
+    function () {
+        $(this).css("color", "black");    // mouse leave
+    }
+);
+
+//before and after
+$("h1").before("<button>New Button Before</button>");
+$("h1").after("<button>New Button After</button>");
+
+//prepend and append
+$("h1").prepend("<button>New Button Prepend</button>");
+$("h1").append("<button>New Button Append</button>");
+
+$("button").on("click", function(event)
+{
+
+	// $("img").remove();
+	// $("h1").toggle();
+	$("h1").fadeToggle(); //fadeIn(), fadeOut()
+});
