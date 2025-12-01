@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/create-blog.css">
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <div id="navbar">
+            <div>
+                <button type="button" class="back-btn" onclick="goBack()">← </button>
+                <h2> Create Blog</h2>
+            </div>
+            <button name="submit" class="submit-btn">Submit</button>
+        </div>
+
+        <div class="title-block">
+            <label for="title">Blog Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter your blog title here...">
+        </div>
+
+        <div class="page-wrapper">
+            <textarea class="document-area" id="content" name="content" placeholder="Start writing your blog here..."></textarea>
+        </div>
+    </form>
+    
+</body>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "title": "jhhjhj",
+    "content": "kese ho ji",
+    "id": 1764514504551,
+    "createdAt": "2025-11-30T14:55:04.551Z"
+  },
+  {
+    "title": "new post",
+    "content": "🚀 Just built my first full-stack Blog Application!\r\nSuper excited to share this project — a clean, dark-themed personal blogging platform built completely from scratch using Node.js, Express, EJS, and JSON-based storage.\r\n\r\nThis project includes:\r\n\r\n📝 Create Blog Page\r\n📄 Single Blog View\r\n🗂 All Blogs Homepage\r\n🗑 Delete Feature\r\n🖊 Sleek Dark UI\r\n📁 JSON as a mini database\r\n🎨 Custom UI/UX styling\r\n📌 Fully responsive layout\r\n\r\nOne of the coolest parts was designing everything myself — from layout, buttons, editor styling, and UI consistency.\r\nI also used a bit of AI guidance for refining the UI styles and structuring certain components, but every piece of logic, routing, and UI development was done by me alone.\r\n\r\n🔧 Tech Stack:\r\n\r\nNode.js\r\n\r\nExpress.js\r\n\r\nEJS\r\n\r\nJSON Storage\r\n\r\nVanilla CSS\r\n\r\nMethod-Override\r\n\r\nFile handling with fs\r\n\r\n💻 GitHub Repository:\r\n🔗 Add your repo link here\r\n👉 https://github.com/Nimratjotsingh/<your-repo-name>\r\n\r\nWould love feedback, suggestions, or improvements!\r\nPlanning to add features like edit blog, categories, Markdown editing, and maybe move this to MongoDB later.\r\n\r\nThanks for reading! 😊\r\n#javascript #nodejs #expressjs #webdevelopment #fullstack #project #blogapp #ejs #programming #learning",
+    "id": 1764515130239,
+    "createdAt": "2025-11-30T15:05:30.239Z"
+  }
+]

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+
+    <%- include("partials/navbar.ejs") %>
+
+    <div class="home-container">
+
+        <h1 class="page-title">Latest Blogs</h1>
+
+        <% if (blogs.length === 0) { %>
+            <p class="no-blogs">No blogs posted yet. Click “Create Blog” to write your first one!</p>
+        <% } %>
+
+        <div class="blogs-grid">
+            <% blogs.forEach(blog => { %>
+                <div class="blog-card">
+                    <h2><%= blog.title %></h2>
+                    <p><%= blog.content.substring(0, 150) %>...</p>
+
+                    <div class="blog-footer">
+                        <small><%= new Date(blog.createdAt).toDateString() %></small>
+                        <div>
+                            <form action="/delete/<%=blog.id%>" method="POST">
+                                <button class="delete-btn crnr">Delete</button>
+                            </form>
+                            <a href="/blog/<%= blog.id %>" class="read-btn crnr">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+
+    </div>
+
+</body>
+</html>

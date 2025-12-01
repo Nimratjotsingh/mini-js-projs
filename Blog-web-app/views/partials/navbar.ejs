@@ -1,0 +1,92 @@
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<nav>
+    <div class="logo">NimBlog</div>
+
+    <div id="menu-btn">☰</div>
+
+    <ul id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/create">Create</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<style>
+    body{
+        font-family: "Poppins", sans-serif;
+    }
+    nav {
+        background-color: #1e1e1e;  
+        padding: 14px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav .logo {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #cccccc;
+        font-size: 1rem;
+        transition: color 0.2s ease;
+    }
+
+    nav ul li a:hover {
+        color: #ffffff;
+    }
+
+   
+    #menu-btn {
+        display: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+   
+    @media (max-width: 700px) {
+        nav ul {
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #1e1e1e;
+            width: 180px;
+            padding: 15px;
+            display: none;
+        }
+
+        nav ul.active {
+            display: block;
+        }
+
+        #menu-btn {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>

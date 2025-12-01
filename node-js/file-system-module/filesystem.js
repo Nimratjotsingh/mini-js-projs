@@ -38,3 +38,5 @@ fs.rmdir("hiee", {recursive: true, force: true}, function(err){
 	if (err) throw err;
 	else("deleted")
 });
+
+
