@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios Package</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div id="main">
+        <h2>Lets find something for you to do👇</h2>
+        <div id="search-area">
+            <form action="/submit" method="POST">
+            <select name="type" class="form-select">
+                <option value="" data-display="Select">Random type</option>
+                <option value="education">Education</option>
+                <option value="charity">Charity</option>
+                <option value="recreational">Recreational</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="busywork">Busywork</option>
+                <option value="social">Social</option>
+                <option value="diy">DIY</option>
+                <option value="music">Music</option>
+            </select>
+            <select name="participants" class="form-select">
+                <option value="">Any number of people</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <button type="submit">Submit</button>
+            </form>
+            <% if (locals.data){%>
+                <h3><%=data.activity%></h3>
+                <div class ="centerd">
+                    <h4>Type:<%=data.type%></h4>
+                    <h4>Participants:<%=data.participants%></h4>
+                </div>
+            <%}else if(locals.error){%>
+                <h3><%=error.response?.data?.error%></h3>
+            <%}else{%>
+                <h3>No activity</h3>
+            <%}%>
+        </div>
+    </div>
+    
+</body>
+</html>
