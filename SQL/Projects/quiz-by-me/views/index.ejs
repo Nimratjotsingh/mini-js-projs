@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <h1>Welcome to  the quiz</h1>
+    </nav>
+    <main>
+        <div id="question-block">
+        <h3>Total Score: <span id="score">
+            <%= score %>
+        </span></h3>
+        <div id="quiz-area">
+        <h2 class="text-center">Capital of:  <%=question.country%></h2>
+        <center>
+            <form action="/answer" method="POST">
+            <input type="text" placeholder="answer" name="answer"/> <br>
+            <button type="submit">Submit</button>
+            </form>
+            <a href="/" ><button>Skip</button></a>
+            <%if (locals.message) { %>
+                <h3><%=locals.message%></h3>    
+            <% } %>
+        </center>
+        </div>
+        </div>
+    </main>
+    
+</body>
+</html>
